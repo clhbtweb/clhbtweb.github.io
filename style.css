@@ -16,17 +16,10 @@ html { scroll-behavior: smooth; }
 body {
   font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
   color: #1a1a1a;
-  background: #FAFAF7; /* Fond unique légèrement crème, doux à l'œil */
+  background: #FAFAF7;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-/* Container global pour homogénéité */
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 60px;
 }
 
 
@@ -44,7 +37,7 @@ body {
   z-index: 100;
   flex-wrap: wrap;
   gap: 16px;
-  transition: padding 0.3s, background 0.3s;
+  transition: padding 0.3s, background 0.3s, box-shadow 0.3s;
 }
 .navbar-logo {
   font-family: 'Space Grotesk', sans-serif;
@@ -85,14 +78,12 @@ body {
 }
 
 
-/* ============== HERO ============== */
+/* ============== HERO (page d'accueil) ============== */
 .hero {
   position: relative;
   height: 680px;
   overflow: hidden;
-  /* Le hero "déborde" sur le contenu suivant via un border-radius en bas */
 }
-
 .slides {
   position: absolute;
   inset: 0;
@@ -113,7 +104,6 @@ body {
 .slide-3 { background: #EF9F27; }
 .slide-4 { background: #85B7EB; }
 .slide-5 { background: #ED93B1; }
-
 .slide-inner {
   display: flex;
   flex-direction: column;
@@ -137,20 +127,12 @@ body {
   color: #fff;
   letter-spacing: 0.06em;
 }
-
 .overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0,0,0,0.75) 0%,
-    rgba(0,0,0,0.50) 45%,
-    rgba(0,0,0,0.20) 100%
-  );
+  background: linear-gradient(135deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.50) 45%, rgba(0,0,0,0.20) 100%);
   pointer-events: none;
 }
-
-/* Fondu en bas du hero pour transition douce */
 .hero::after {
   content: "";
   position: absolute;
@@ -162,7 +144,6 @@ body {
   pointer-events: none;
   z-index: 3;
 }
-
 .hero-content {
   position: absolute;
   inset: 0;
@@ -204,11 +185,7 @@ body {
   max-width: 540px;
   font-weight: 400;
 }
-.hero-btns {
-  display: flex;
-  gap: 14px;
-  flex-wrap: wrap;
-}
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
 .btn-primary {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 14px;
@@ -249,8 +226,6 @@ body {
   background: rgba(255,255,255,0.2);
   transform: translateY(-2px);
 }
-
-/* Flèches */
 .arrow {
   position: absolute;
   top: 50%;
@@ -277,8 +252,6 @@ body {
 }
 .arrow-left { left: 28px; }
 .arrow-right { right: 28px; }
-
-/* Label projet */
 .slide-label {
   position: absolute;
   bottom: 110px;
@@ -304,8 +277,6 @@ body {
   transition: opacity 0.3s;
   letter-spacing: -0.01em;
 }
-
-/* Points */
 .dots {
   position: absolute;
   bottom: 115px;
@@ -331,23 +302,43 @@ body {
 }
 
 
+/* ============== HEADER PAGES INTÉRIEURES ============== */
+.page-header {
+  padding: 100px 60px 60px;
+  text-align: center;
+}
+.page-eyebrow {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+  font-weight: 500;
+}
+.page-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 52px;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-sub {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 17px;
+  color: #666;
+  line-height: 1.6;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+
 /* ============== SECTIONS COMMUNES ============== */
-.section {
-  padding: 100px 60px;
-  position: relative;
-}
-
-/* Sections d'apparition fluide au scroll */
-.fade-in {
-  opacity: 0;
-  transform: translateY(30px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
-}
-.fade-in.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 .section-label {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 11px;
@@ -376,11 +367,20 @@ body {
   font-weight: 400;
 }
 
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-/* ============== PROJETS ============== */
+
+/* ============== PROJETS (page accueil) ============== */
 .projects-section {
   padding: 60px 60px 80px;
-  /* Pas de fond différent — utilise le fond crème global */
 }
 .project-row {
   display: flex;
@@ -452,11 +452,7 @@ body {
   margin-bottom: 18px;
   font-weight: 400;
 }
-.project-pills {
-  display: flex;
-  gap: 8px;
-  flex-wrap: wrap;
-}
+.project-pills { display: flex; gap: 8px; flex-wrap: wrap; }
 .pill {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 12px;
@@ -496,10 +492,9 @@ body {
 .more-link:hover { gap: 14px; }
 
 
-/* ============== OFFRES ============== */
+/* ============== OFFRES (page accueil) ============== */
 .offers-section {
   padding: 80px 60px;
-  /* Pas de fond différent */
 }
 .offers-grid {
   display: grid;
@@ -602,6 +597,116 @@ body {
 .btn-blue:hover { background: #E6F1FB; transform: translateY(-1px); }
 
 
+/* ============== PAGE OFFRES (offres.html) ============== */
+.offers-page {
+  padding: 0 60px 80px;
+}
+.offers-page-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.offer-detail {
+  background: #fff;
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.06);
+  padding: 36px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+.offer-detail:hover {
+  box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+  transform: translateY(-3px);
+  border-color: rgba(0,0,0,0.1);
+}
+.offer-detail.featured {
+  border-color: #534AB7;
+  border-width: 2px;
+  box-shadow: 0 12px 40px rgba(83, 74, 183, 0.1);
+}
+.offer-detail.featured:hover {
+  box-shadow: 0 16px 50px rgba(83, 74, 183, 0.18);
+}
+.featured-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  padding: 5px 11px;
+  border-radius: 99px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  background: #534AB7;
+  color: #EEEDFE;
+}
+.offer-detail .offer-name {
+  font-size: 24px;
+  margin-bottom: 0;
+}
+.offer-price {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+.price-num {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: -0.04em;
+  line-height: 1;
+}
+.price-suffix {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 13px;
+  color: #888;
+  font-weight: 500;
+}
+.price-custom {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  letter-spacing: -0.025em;
+}
+.offer-detail .offer-desc {
+  margin-bottom: 0;
+  font-size: 14px;
+}
+.offer-detail .offer-list {
+  flex: 1;
+  margin-bottom: 8px;
+}
+.offer-cta {
+  font-family: 'Space Grotesk', sans-serif;
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 22px;
+  border-radius: 8px;
+  text-decoration: none;
+  text-align: center;
+  margin-top: 8px;
+  transition: all 0.2s;
+  letter-spacing: -0.01em;
+}
+.cta-amber { color: #854F0B; border: 1px solid #854F0B; background: transparent; }
+.cta-amber:hover { background: #FAEEDA; transform: translateY(-1px); }
+.cta-purple-filled { background: #534AB7; color: #EEEDFE; }
+.cta-purple-filled:hover { background: #3C3489; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(83, 74, 183, 0.25); }
+.cta-blue { color: #185FA5; border: 1px solid #185FA5; background: transparent; }
+.cta-blue:hover { background: #E6F1FB; transform: translateY(-1px); }
+
+
 /* ============== STATS ============== */
 .stats {
   padding: 80px 60px;
@@ -659,7 +764,6 @@ body {
   position: relative;
   overflow: hidden;
 }
-/* Petit effet de gradient subtil sur le CTA */
 .cta-inner::before {
   content: "";
   position: absolute;
@@ -670,10 +774,7 @@ body {
   background: radial-gradient(circle, rgba(83,74,183,0.15) 0%, transparent 70%);
   pointer-events: none;
 }
-.cta-inner > * {
-  position: relative;
-  z-index: 1;
-}
+.cta-inner > * { position: relative; z-index: 1; }
 .cta-title {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 30px;
@@ -724,10 +825,7 @@ body {
   color: #aaa;
   font-weight: 400;
 }
-.footer-links {
-  display: flex;
-  gap: 28px;
-}
+.footer-links { display: flex; gap: 28px; }
 .footer-links a {
   font-family: 'Space Grotesk', sans-serif;
   font-size: 13px;
@@ -740,6 +838,10 @@ body {
 
 
 /* ============== RESPONSIVE ============== */
+@media (max-width: 968px) {
+  .offers-page-grid { grid-template-columns: 1fr; max-width: 500px; }
+}
+
 @media (max-width: 768px) {
   .navbar { padding: 18px 24px; }
   .navbar-links { gap: 22px; }
@@ -753,8 +855,13 @@ body {
   .arrow-left { left: 12px; }
   .arrow-right { right: 12px; }
 
+  .page-header { padding: 60px 24px 40px; }
+  .page-title { font-size: 36px; }
+  .page-sub { font-size: 15px; }
+
   .projects-section,
   .offers-section,
+  .offers-page,
   .stats,
   .cta,
   .footer { padding-left: 24px; padding-right: 24px; }
@@ -772,4 +879,5 @@ body {
   .hero-title { font-size: 32px; }
   .stat-card { min-width: 100%; }
   .section-title { font-size: 26px; }
+  .page-title { font-size: 28px; }
 }
