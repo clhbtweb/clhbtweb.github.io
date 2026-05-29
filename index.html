@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clement Hubert — Chef de projet Communication</title>
+  <meta name="description" content="Portfolio de Clement Hubert, chef de projet en communication. Stratégie, branding, événementiel, social media.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============== NAVBAR ============== -->
+  <nav class="navbar">
+    <a href="#" class="navbar-logo">Clement Hubert</a>
+    <ul class="navbar-links">
+      <li><a href="#accueil" class="active">Accueil</a></li>
+      <li><a href="#offres">Offres</a></li>
+      <li><a href="#apropos">À propos</a></li>
+      <li><a href="projets.html">Projets</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ============== HERO ============== -->
+  <section class="hero" id="accueil">
+
+    <!-- Slides en arrière-plan -->
+    <div class="slides" id="slides">
+      <div class="slide slide-1">
+        <div class="slide-inner">
+          <svg viewBox="0 0 24 24"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+          <span>Campagne de lancement</span>
+        </div>
+      </div>
+      <div class="slide slide-2">
+        <div class="slide-inner">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <span>Événement corporate</span>
+        </div>
+      </div>
+      <div class="slide slide-3">
+        <div class="slide-inner">
+          <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          <span>Refonte éditoriale</span>
+        </div>
+      </div>
+      <div class="slide slide-4">
+        <div class="slide-inner">
+          <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          <span>Social media</span>
+        </div>
+      </div>
+      <div class="slide slide-5">
+        <div class="slide-inner">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8a4 4 0 0 1 0 8 4 4 0 0 0-4 4"/></svg>
+          <span>Branding</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Overlay sombre pour la lisibilité -->
+    <div class="overlay"></div>
+
+    <!-- Flèches de navigation -->
+    <button class="arrow arrow-left" id="prevBtn" aria-label="Précédent">‹</button>
+    <button class="arrow arrow-right" id="nextBtn" aria-label="Suivant">›</button>
+
+    <!-- Contenu textuel du hero -->
+    <div class="hero-content">
+      <p class="eyebrow">Chef de projet · Communication</p>
+      <h1 class="hero-title">
+        Je donne vie à vos<br>
+        <span>stratégies de communication</span>
+      </h1>
+      <p class="hero-sub">
+        De la conception à l'exécution, j'accompagne équipes et marques dans leurs projets — digitaux, événementiels et éditoriaux.
+      </p>
+      <div class="hero-btns">
+        <a href="projets.html" class="btn-primary">Voir mes projets</a>
+        <a href="#contact" class="btn-secondary">Me contacter</a>
+      </div>
+    </div>
+
+    <!-- Indicateur du projet en cours (bas gauche) -->
+    <div class="slide-label">
+      <span class="slide-label-pre">Projet —</span>
+      <span class="slide-label-name" id="slideName">Campagne de lancement</span>
+    </div>
+
+    <!-- Points de navigation (bas droite) -->
+    <div class="dots" id="dots">
+      <button class="dot active" data-index="0" aria-label="Slide 1"></button>
+      <button class="dot" data-index="1" aria-label="Slide 2"></button>
+      <button class="dot" data-index="2" aria-label="Slide 3"></button>
+      <button class="dot" data-index="3" aria-label="Slide 4"></button>
+      <button class="dot" data-index="4" aria-label="Slide 5"></button>
+    </div>
+
+  </section>
+
+  <!-- ============== PROJETS MIS EN AVANT ============== -->
+  <section class="projects-section">
+    <p class="section-label">Réalisations</p>
+    <h2 class="section-title">Projets mis en avant</h2>
+    <p class="section-desc">Une sélection de mes projets les plus significatifs.</p>
+
+    <a href="#" class="project-row">
+      <div class="project-tag pt-purple">
+        <span class="tag-name tn-purple">Communication</span>
+        <span class="tag-year ty-purple">2024</span>
+      </div>
+      <div class="project-info">
+        <div class="project-title">Campagne de lancement — Marque X</div>
+        <div class="project-desc">Coordination d'une campagne 360° : stratégie de contenu, relations presse, activation digitale et suivi des KPIs sur 3 mois.</div>
+        <div class="project-pills">
+          <span class="pill">Stratégie</span>
+          <span class="pill">360°</span>
+          <span class="pill">Digital</span>
+        </div>
+      </div>
+      <div class="project-arrow">→</div>
+    </a>
+
+    <a href="#" class="project-row">
+      <div class="project-tag pt-teal">
+        <span class="tag-name tn-teal">Événementiel</span>
+        <span class="tag-year ty-teal">2024</span>
+      </div>
+      <div class="project-info">
+        <div class="project-title">Séminaire annuel — Entreprise Y</div>
+        <div class="project-desc">Organisation d'un séminaire de 200 personnes : logistique, scénographie, coordination des intervenants et communication interne.</div>
+        <div class="project-pills">
+          <span class="pill">Événementiel</span>
+          <span class="pill">Interne</span>
+        </div>
+      </div>
+      <div class="project-arrow">→</div>
+    </a>
+
+    <a href="#" class="project-row">
+      <div class="project-tag pt-amber">
+        <span class="tag-name tn-amber">Branding</span>
+        <span class="tag-year ty-amber">2023</span>
+      </div>
+      <div class="project-info">
+        <div class="project-title">Refonte identité — ONG Z</div>
+        <div class="project-desc">Refonte complète de l'identité visuelle et éditoriale : charte graphique, templates et guide de style.</div>
+        <div class="project-pills">
+          <span class="pill">Branding</span>
+          <span class="pill">Éditorial</span>
+          <span class="pill">Print</span>
+        </div>
+      </div>
+      <div class="project-arrow">→</div>
+    </a>
+
+    <a href="projets.html" class="more-link">Voir tous les projets →</a>
+  </section>
+
+  <!-- ============== OFFRES ============== -->
+  <section class="offers-section" id="offres">
+    <p class="section-label">Offres</p>
+    <h2 class="section-title">Comment j'accompagne les entreprises</h2>
+    <p class="section-desc">Des offres pensées pour répondre aux besoins concrets des équipes et des marques, de la réflexion stratégique à l'exécution.</p>
+
+    <div class="offers-grid">
+
+      <div class="offer-card">
+        <div>
+          <div class="offer-icon icon-purple">
+            <svg viewBox="0 0 24 24" stroke="#534AB7" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+          </div>
+          <div class="offer-name">Stratégie de communication</div>
+          <div class="offer-desc">Je construis avec vous une stratégie cohérente, alignée sur vos objectifs business et adaptée à vos cibles.</div>
+          <ul class="offer-list">
+            <li><span class="check check-purple">✓</span> Audit de l'existant & benchmark</li>
+            <li><span class="check check-purple">✓</span> Définition des messages clés</li>
+            <li><span class="check check-purple">✓</span> Plan de communication annuel</li>
+          </ul>
+        </div>
+        <a href="#contact" class="offer-btn btn-purple">En savoir plus →</a>
+      </div>
+
+      <div class="offer-card">
+        <div>
+          <div class="offer-icon icon-teal">
+            <svg viewBox="0 0 24 24" stroke="#0F6E56" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </div>
+          <div class="offer-name">Community management</div>
+          <div class="offer-desc">Je prends en charge vos réseaux sociaux pour créer une communauté engagée et une présence digitale cohérente.</div>
+          <ul class="offer-list">
+            <li><span class="check check-teal">✓</span> Ligne éditoriale & calendrier de contenu</li>
+            <li><span class="check check-teal">✓</span> Création & publication des posts</li>
+            <li><span class="check check-teal">✓</span> Reporting mensuel & optimisation</li>
+          </ul>
+        </div>
+        <a href="#contact" class="offer-btn btn-teal">En savoir plus →</a>
+      </div>
+
+      <div class="offer-card">
+        <div>
+          <div class="offer-icon icon-amber">
+            <svg viewBox="0 0 24 24" stroke="#854F0B" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+          </div>
+          <div class="offer-name">Branding & identité</div>
+          <div class="offer-desc">Je vous aide à construire ou refondre une identité de marque forte, reconnaissable et cohérente sur tous vos supports.</div>
+          <ul class="offer-list">
+            <li><span class="check check-amber">✓</span> Positionnement & plateforme de marque</li>
+            <li><span class="check check-amber">✓</span> Charte graphique & guide de style</li>
+            <li><span class="check check-amber">✓</span> Templates de communication</li>
+          </ul>
+        </div>
+        <a href="#contact" class="offer-btn btn-amber">En savoir plus →</a>
+      </div>
+
+      <div class="offer-card">
+        <div>
+          <div class="offer-icon icon-blue">
+            <svg viewBox="0 0 24 24" stroke="#185FA5" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          </div>
+          <div class="offer-name">Conseil & audit com'</div>
+          <div class="offer-desc">Un regard extérieur et expert sur votre communication pour identifier les axes d'amélioration à fort impact.</div>
+          <ul class="offer-list">
+            <li><span class="check check-blue">✓</span> Audit complet de votre communication</li>
+            <li><span class="check check-blue">✓</span> Recommandations actionnables</li>
+            <li><span class="check check-blue">✓</span> Accompagnement à la mise en œuvre</li>
+          </ul>
+        </div>
+        <a href="#contact" class="offer-btn btn-blue">En savoir plus →</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============== STATS ============== -->
+  <section class="stats" id="apropos">
+    <p class="section-label">En chiffres</p>
+    <h2 class="section-title">Mon expérience</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">5+</div>
+        <div class="stat-label">Années d'expérience</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">20+</div>
+        <div class="stat-label">Projets livrés</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">10+</div>
+        <div class="stat-label">Clients & marques</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CTA ============== -->
+  <section class="cta" id="contact">
+    <div class="cta-inner">
+      <div>
+        <div class="cta-title">Travaillons ensemble</div>
+        <div class="cta-sub">Disponible pour des missions freelance ou CDI</div>
+      </div>
+      <a href="mailto:contact@clementhubert.com" class="cta-btn">✉ M'écrire</a>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="footer">
+    <span class="footer-name">© 2026 Clement Hubert</span>
+    <div class="footer-links">
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
